@@ -1,0 +1,261 @@
+/* ---------- BASE STYLES ---------- */
+body {
+  background-color: #f0f0f0; /* Very light gray */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* ---------- HEADINGS ---------- */
+h1,
+h2,
+h3 {
+  color: #0b0b0b;
+  margin: 10px 0;
+}
+
+/* ---------- SIDE NAVIGATION ---------- */
+.side-nav {
+  width: 220px;
+  background-color: #333333; /* Dark gray to match header/footer */
+  padding: 20px;
+  position: fixed;
+  height: 100vh;
+  overflow-y: auto;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.side-nav li {
+  margin-bottom: 15px;
+}
+
+.side-nav a {
+  text-decoration: none;
+  color: #ffffff; /* White text for nav items */
+  font-weight: bold;
+  display: block;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #333333; /* Same as nav background */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.side-nav a:hover,
+.side-nav a[aria-current="page"] {
+  background-color: #e0e0e0; /* Light gray hover */
+  color: #333333; /* Dark text on hover */
+}
+
+/* ---------- MAIN CONTENT ---------- */
+main {
+  margin-left: 240px; /* Space from side nav */
+  padding: 20px;
+  width: calc(100% - 240px);
+}
+
+.highlight {
+  color: #0066cc;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+/* Center all main page sections */
+#main section {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 20px; /* Horizontal padding */
+}
+
+/* Keep list items left-aligned on the Pricing page */
+#main section[aria-label="Observations"] {
+  text-align: left;
+}
+
+/* Center tables within sections */
+#main section table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  background-color: #333333; /* Full width dark gray */
+  padding: 15px 20px; /* Spacing inside header */
+  border-radius: 0 0 8px 8px; /* Optional rounded bottom */
+  width: 100%;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  clear: both;
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+  border-top: 3px solid #555;
+  position: relative;
+}
+
+/* ---------- IMAGES ---------- */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ---------- TABLES ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+th,
+td {
+  border: 1px solid #999;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+/* ---------- FORMS & QUIZ ---------- */
+form {
+  background-color: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin: 6px 0 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input[type="radio"] {
+  margin: 0 6px 0 0;
+  vertical-align: middle;
+}
+
+.question label {
+  display: inline-block;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+input[type="submit"],
+input[type="reset"],
+button {
+  width: auto;
+  background-color: #0066cc;
+  color: #ffffff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 8px 4px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover {
+  background-color: #004c99;
+}
+
+/* Quiz container */
+.quiz-container {
+  width: 90%;
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- GALLERY ---------- */
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery figure {
+  width: 300px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* ---------- PARAGRAPHS ---------- */
+p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+/* ---------- MEDIA QUERY ---------- */
+@media (max-width: 768px) {
+  .side-nav {
+    position: relative;
+    width: 100%;
+    height: auto;
+    box-shadow: none;
+  }
+
+  main {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  footer {
+    margin-left: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  form,
+  .quiz-container {
+    width: 95%;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+/* ---------- REFERENCES PAGE OVERRIDE ---------- */
+#main section[aria-label="Sources and References"] {
+  text-align: left; /* Keep all text in References section left-aligned */
+}
