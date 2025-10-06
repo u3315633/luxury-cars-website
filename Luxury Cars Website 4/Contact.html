@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Contact page for Luxury Cars — Get in touch with the author."
+    >
+    <meta name="author" content="U3315633">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+  </head>
+
+  <body>
+    <nav class="side-nav" aria-label="Primary navigation">
+      <ul>
+        <li><a href="Index.html">Home</a></li>
+        <li><a href="UltraLuxuryComparison.html">Ultra Luxury</a></li>
+        <li><a href="ExecutiveClassComparison.html">Executive Class</a></li>
+        <li><a href="SupercarShowdown.html">Supercars</a></li>
+        <li><a href="LuxuryCarPricing.html">Pricing</a></li>
+        <li><a href="EvolutionLuxuryCars.html">Evolution</a></li>
+        <li><a href="LuxuryCarQuiz.html">Quiz</a></li>
+        <li><a href="Contact.html" aria-current="page">Contact</a></li>
+        <li><a href="MetaPage.html">Meta Page</a></li>
+        <li><a href="References.html">References</a></li>
+      </ul>
+    </nav>
+
+    <main id="main">
+      <header>
+        <img src="images/logo.png" alt="Luxury Cars logo" class="logo">
+        <h1>Contact Us</h1>
+      </header>
+
+      <section aria-labelledby="contact-heading">
+        <h2 id="contact-heading">We’d Love to Hear From You!</h2>
+        <p>
+          If you have questions, feedback, or suggestions about luxury cars,
+          please fill out the form below. Alternatively, email us at
+          <a href="mailto:u3315633@uni.canberra.edu.au" style="color: #0066cc">
+            u3315633@uni.canberra.edu.au
+          </a>.
+        </p>
+      </section>
+
+      <form
+        id="contactForm"
+        onsubmit="return validateForm();"
+        aria-label="Contact Form"
+      >
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message here..."
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-buttons">
+          <input type="submit" value="Submit Form">
+          <input type="reset" value="Reset Form">
+        </div>
+      </form>
+    </main>
+
+    <footer>© 2025 Luxury Cars Inc. | Student ID: U3315633</footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
